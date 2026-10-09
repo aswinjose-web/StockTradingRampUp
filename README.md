@@ -2,6 +2,9 @@
 
 Project workspace for stock trading learning materials and results.
 
+The bootstrap site lives in `docs/index.html` and is published with GitHub Pages at
+https://aswinjose-web.github.io/StockTradingRampUp/.
+
 ## Project outputs
 
 Save publishable learning notes, analyses, charts, and reports in this repository.
@@ -17,5 +20,4 @@ git push
 
 Repository: https://github.com/aswinjose-web/StockTradingRampUp
 
-Pushing publishes files to GitHub. Website hosting can be configured once the
-project has a website or other deployable application.
+Pushing updates `main` on GitHub. GitHub Pages publishes the `docs/` folder.
