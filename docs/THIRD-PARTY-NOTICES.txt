@@ -1,0 +1,19 @@
+TradingView Lightweight Charts™
+Copyright (с) 2025 TradingView, Inc. https://www.tradingview.com/
+Licensed under Apache License 2.0. https://www.apache.org/licenses/LICENSE-2.0
+
+React and React DOM — MIT, Meta Platforms, Inc. and affiliates.
+React Router — MIT, Remix Software Inc.
+Lucide — ISC, Lucide Contributors.
+Zod — MIT, Colin McDonnell.
+Papa Parse — MIT, Matthew Holt.
+idb — ISC, Jake Archibald.
+Vite — MIT, Evan You and Vite Contributors.
+TypeScript — Apache-2.0, Microsoft Corporation.
+Vitest — MIT, Vitest Contributors.
+Playwright — Apache-2.0, Microsoft Corporation.
+DM Sans and Libre Baskerville — SIL Open Font License; fonts may be served by Google Fonts with local system fallbacks.
+
+See installed package LICENSE files for full notices and package-lock.json for exact versions.
+TradingView Widgets are externally embedded and retain their own attribution.
+Educational references are linked, not copied course content.

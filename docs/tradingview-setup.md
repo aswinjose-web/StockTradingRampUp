@@ -1,0 +1,13 @@
+# TradingView integration
+
+The Advanced Chart widget uses the official cross-origin iframe URL observed from TradingView's embedding script: `https://www.tradingview-widget.com/embed-widget/advanced-chart/?locale=en#<encoded-config>`. Direct embedding avoids vendor scripts on our origin and asynchronous-script failures when a view unmounts. Actual browser observation found `NSE:RELIANCE` reports “This symbol is only available on TradingView,” which the official FAQ explains as unavailable in external widgets. The [official Asia-Pacific market list](https://www.tradingview.com/widget-docs/markets/asia-pacific/) supports BSE end-of-day data. Therefore NSE company selections use an explicitly labelled BSE widget fallback for the same company; research identifiers and imported/provider data are not changed. Examples include RELIANCE, TCS, INFY, HDFCBANK, ICICIBANK and ITC.
+
+Widget containers respond to available width, theme changes replace the iframe, and navigation removes it. Frame load is labelled explicitly rather than “data connected”; symbol restrictions, delays and errors are owned by the external chart and cannot be reliably inferred through cross-origin internals. “Chart unavailable?” lets the user report the visible problem and exposes fallback guidance. A timeout warns when the frame fails to load. No script is used to inspect or extract embedded market values.
+
+External chart and script availability are browser-tested separately. A script being downloaded or iframe existing is not proof that every NSE/BSE symbol is supported. See the release validation record for observations. The app keeps an official chart link and no-credential imported/educational fallback. Widgets are never scraped or used in our calculations.
+
+Lightweight Charts is bundled via npm (version pinned in lockfile), Apache-2.0. Its attribution logo is enabled and the page links to TradingView as creator. `PriceChart.tsx` creates validated candles, volume and shared-time indicator panes, and removes the chart on unmount. Indicator routines live independently in `engines/indicators.ts`.
+
+SMA requires N records; EMA uses a first-N SMA seed. RSI uses Wilder-smoothed changes and returns 50 for a flat input, 100 for all gains and 0 for all losses. MACD requires slow EMA history plus signal warm-up. Bollinger uses population deviation. ATR starts with N true ranges and then Wilder-smooths. Different vendor conventions/adjustments can create different values. No future bars enter an earlier indicator.
+
+[Widget docs](https://www.tradingview.com/widget-docs/) · [Lightweight Charts docs](https://tradingview.github.io/lightweight-charts/docs) · [Upstream NOTICE](https://github.com/tradingview/lightweight-charts/blob/master/NOTICE)

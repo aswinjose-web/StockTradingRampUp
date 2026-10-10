@@ -1,0 +1,9 @@
+# Visual design specification and review
+
+The Image Gen dashboard concept is the primary visual reference. It is a design aid, not a bitmap shipped as UI. All controls, diagrams, charts and copy are rendered in code. Generated concept: `C:/Users/aswin/.codex/generated_images/01a122fc-caa1-7b61-aa15-e60f2e1a3540/exec-21526072-9980-4c7e-aead-1b1ec3f84f19.png`.
+
+True-white surfaces, cool near-white workspace/sidebar, navy text, forest green actions and pale mint learning panel; no photographic assets or colour overlays. Serif greeting/lesson emphasis, sans-serif UI controls and body text. Thin borders, modest radius and quiet dividers. Lucide outline navigation icons with restrained stroke weights. Desktop sidebar, top workspace bar, full-width learning banner and progress rail, chart/research two-column composition and provider strip. Mobile converts to one column with an accessible drawer.
+
+Concrete functional deviations from generated copy: actual system/timezone greeting, eight-reference roster labels rather than company logo graphics, company rows explicitly say price data not loaded, 8% instead of 12% projection, no fabricated provider-connected checkmarks, optional first-visit invitation, “Settings & Integrations” in navigation. These keep the generated visual hierarchy while satisfying source honesty and user-requested behaviour. The chart uses a code-native accessible SVG; the brand mark and growth motif are simple vectors.
+
+Review points: layout and section order; serif/sans hierarchy; white/navy/mint/green palette; border/radius/spacing; icon treatment; native controls and real state; responsive drawer and readable mobile fields. See validation.md for screenshot observations and material repairs. The screenshot dimensions should match the concept approximately1505×1045 when practical, plus390×844 mobile.

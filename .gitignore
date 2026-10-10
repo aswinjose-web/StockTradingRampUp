@@ -22,3 +22,7 @@ build/
 .DS_Store
 Thumbs.db
 ~$*
+*.tsbuildinfo
+playwright-report/
+test-results/
+.qa/
