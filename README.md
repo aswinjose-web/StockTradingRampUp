@@ -27,7 +27,7 @@ npm run test:e2e
 npm run build
 ```
 
-Development URL: http://127.0.0.1:5173/StockTradingRampUp/. Vite builds to `docs/`. Hash routing supports refresh and back/forward at the repository base path. Keep production output committed: GitHub Pages still publishes `main:/docs` using the existing Pages build workflow. The separate validation workflow does not change Pages configuration.
+Development URL: http://127.0.0.1:5173/StockTradingRampUp/. Vite builds to `docs/`. Hash routing supports refresh and back/forward at the repository base path. Keep production output committed: GitHub Pages still publishes `main:/docs` using the existing Pages build workflow. A validation workflow template is preserved in `docs/ci/validate.yml`; activation requires a GitHub credential with workflow permission. It does not change Pages configuration.
 
 ## Data and privacy
 

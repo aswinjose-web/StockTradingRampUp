@@ -16,7 +16,7 @@ Initial inspection on 10 October 2026 confirmed `build_type: legacy`, source bra
 6. Check the existing Pages workflow conclusion for the exact pushed commit.
 7. Inspect real deployed HTML, request its referenced assets, exercise hash routes, refresh, back/forward and the credential-free default.
 
-The separate `Validate Market Lab` workflow checks code/tests/source-to-output consistency; it does not replace the Pages workflow. CI failing does not automatically prevent the legacy Pages deployment, so local passing checks are mandatory before push.
+The `Validate Market Lab` workflow template in `docs/ci/validate.yml` checks code/tests/source-to-output consistency; it does not replace the Pages workflow. It is not active: the connected GitHub OAuth credential lacks `workflow` scope, and GitHub rejected the initial push containing `.github/workflows/validate.yml`. To enable it, an authorised GitHub account can copy the template to that path using a credential with workflow permission. Local and published-origin checks remain the release evidence. Validation CI would not automatically prevent the legacy Pages deployment, so local passing checks are mandatory before push.
 
 ## Routing and assets
 
