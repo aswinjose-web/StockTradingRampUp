@@ -14,5 +14,6 @@ The release prioritises a usable, integrated credential-free learning/research e
 - LocalStorage/IndexedDB are browser-specific; no cloud sync or guaranteed recovery after browser data removal. Schema version1 rejects incompatible backups. Future releases need explicit migrations.
 - Time-sensitive tax rates, settlement cycles and derivatives contract sizes are not hardcoded. Users must consult current official product/year guidance.
 - Test browser coverage is Chromium. Cross-browser and real-device coverage remain future work. Fonts and widgets need external connectivity, but core functionality uses local fallbacks.
+- Additional validation CI is an inactive template at docs/ci/validate.yml because the connected GitHub credential lacks workflow permission. Local and published-origin tests passed; the existing Pages deployment workflow is active and verified.
 
 See validation.md for actual results and unverified checks. Missing data is never fabricated to satisfy a feature checklist.

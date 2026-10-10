@@ -16,4 +16,4 @@ Widgets are external chart visualisation; no programmatic access to their observ
 
 ## Maintainability
 
-Feature modules contain page-specific forms; primitives share controls and notices. Pure math modules are unit-tested. Stateful workflows have browser tests. Static `HashRouter` navigation keeps deep links on the same HTML resource and preserves back/forward. A source-to-output CI check guards committed Pages bundles. See limitations.md before assuming all requested advanced features are present.
+Feature modules contain page-specific forms; primitives share controls and notices. Pure math modules are unit-tested. Stateful workflows have browser tests. Static `HashRouter` navigation keeps deep links on the same HTML resource and preserves back/forward. A source-to-output CI check is prepared in docs/ci/validate.yml, awaiting workflow permission to activate. See limitations.md before assuming all requested advanced features are present.

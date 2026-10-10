@@ -42,4 +42,12 @@ No user-owned token was available. Genuine authenticated Upstox browser CORS, to
 
 ## Release and deployment
 
-Final production tests, commit and GitHub Actions/Pages status will be recorded after publish. Deployment is never inferred from push acceptance. The subsequent verification checks exact-commit workflow results, real HTML and asset bytes, deep hash routes, refresh/back/forward and a clean no-credential browser context.
+Implementation commit: `ff583950a5175348e6fdf466a0810d92378ba0d7`. Published release commit: `38ad82b5a58b4945899c7ada84b9675cd603a957` (preserves the optional validation workflow as a template). The existing [Pages run 38009058991](https://github.com/aswinjose-web/StockTradingRampUp/actions/runs/38009058991) completed successfully for that exact release commit. Pages remains main:/docs at [the original URL](https://aswinjose-web.github.io/StockTradingRampUp/).
+
+The full published-origin Chromium suite passed **16/16** in approximately1.4 minutes. This repeats all listed browser flows in clean browser contexts against GitHub Pages, including deep hash routes, refresh and back/forward, credential-free learning, imports and persisted progress. Six external BSE widgets rendered without the observed unsupported-symbol state at2026-10-10T00:27:54Z–00:28:31Z. No user-owned credential was used.
+
+Independent HTTP/byte verification checked the published index and29 recursively referenced application assets: all30 requests returned200 and matched the locally tested production output (HTML line endings normalised; asset SHA-256 exact). Entry bundle: `assets/index-euktyelO.js`, SHA-256 `7522e04502368d863156668dc9ae58bcfbe32ec8d527af055d6f0779fa104f3a`. The in-app browser separately displayed the published dashboard and was left open on it. Desktop1440×1000 and mobile390×844 screenshots were reviewed; material visual results match the ledger above.
+
+Local evidence directory: `C:/Users/aswin/.codex/visualizations/2026/10/09/01a122fc-caa1-7b61-aa15-e60f2e1a3540/published`. Files include dashboard-desktop.png, dashboard-mobile-dark.png, research-educational.png, six widget screenshots, widget-diagnostics.json and asset-verification.json. Evidence is kept outside the source repository.
+
+Additional validation CI was **not activated or run**. GitHub rejected the first push because the connected OAuth credential lacks workflow scope. The ready-to-enable template is saved at docs/ci/validate.yml; moving it to .github/workflows requires an authorised credential with that permission. Local and live tests above are the validation evidence. The existing Pages workflow ran successfully, and deployment was verified independently of push acceptance.
